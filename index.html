@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Generator</title>
+  <!-- Bootstrap css -->
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+  <!-- My css -->
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <div class="container text-center">
+    <!-- ROW-1 -->
+    <div class="row">
+      <!-- Navigation -->
+      <div class="col my-col-navigation">
+        <nav>
+          <div class="nav nav-tabs border-0" id="nav-tab" role="tablist">
+            <button class="nav-link active border-0" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-font"
+              type="button" role="tab" aria-controls="nav-font" aria-selected="false">
+              Text
+            </button>
+            <button class="nav-link border-0" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-border"
+              type="button" role="tab" aria-controls="nav-border" aria-selected="false">
+              Border
+            </button>
+            <button class="nav-link border-0" id="nav-backgroundColor-tab" data-bs-toggle="tab"
+              data-bs-target="#nav-backgroundColor" type="button" role="tab" aria-controls="nav-backgroundColor"
+              aria-selected="false">
+              Backgroound Color
+            </button>
+            <button class="nav-link border-0" id="nav-gradient-tab" data-bs-toggle="tab" data-bs-target="#nav-gradient"
+              type="button" role="tab" aria-controls="nav-gradient" aria-selected="false">
+              Gradient
+            </button>
+            <button class="nav-link border-0" id="nav-position-tab" data-bs-toggle="tab"
+              data-bs-target="#nav-position" type="button" role="tab" aria-controls="nav-position" aria-selected="true">
+              Position
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ROW-2 -->
+    <div class="row">
+      <div class="col col-12 col-md-6 col-lg-4 my-col-configuration">
+        <!-- Configuration -->
+        <div class="tab-content" id="nav-tabContent">
+          <!-- Tab 1 (Font) -->
+          <div class="tab-pane fade show active" id="nav-font" role="tabpanel" aria-labelledby="nav-font-tab" tabindex="0">
+            <div>
+              <ul class="configuration-list">
+                <li>
+                  <label for="">font-family</label>
+                  <select id="selectFontFamily" class="form-select">
+                    <!-- <option value="Arial" selected >Arial</option> -->
+                    <option value="serif" selected>serif</option>
+                    <option value="sans-serif">sans-serif</option>
+                    <option value="monospace">monospace</option>
+                    <option value="cursive">cursive</option>
+                  </select>
+                </li>
+
+                <li>
+                  <label for="">font-size</label>
+                  <input id="selectFontSize" class="form-control" type="number" min="12">
+                </li>
+
+                <li>
+                  <label for="">font-weight</label>
+                  <input id="selectFontWeight" class="form-control" type="number" min="100" max="900" step="100">
+                </li>
+
+                <li>
+                  <label for="">color</label>
+                  <input id="selectColor" class="form-control form-control-color" type="color">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Tab 2 (Border) -->
+          <div class="tab-pane fade" id="nav-border" role="tabpanel" aria-labelledby="nav-border-tab" tabindex="0">
+            <div>
+              <ul class="configuration-list">
+                <li>
+                  <label for="">border-width</label>
+                  <input id="selectBorderWidth" class="form-control" type="number">
+                </li>
+
+                <li>
+                  <label for="">border-style</label>
+                  <select id="selectBorderStyle" class="form-select">
+                    <option value="none">none</option>
+                    <option value="hidden">hidden</option>
+                    <option value="dotted">dotted</option>
+                    <option value="dashed">dashed</option>
+                    <option value="solid" selected>solid</option>
+                    <option value="double">double</option>
+                    <option value="groove">groove</option>
+                    <option value="ridge">ridge</option>
+                    <option value="inset">inset</option>
+                    <option value="outset">outset</option>
+                  </select>
+                </li>
+
+                <li>
+                  <label for="">border-color</label>
+                  <input id="selectBorderColor" class="form-control form-control-color" type="color">
+                </li>
+
+                <li>
+                  <label for="">border-radius:</label>
+                </li>
+
+                <li>
+                  <label for="">top left</label>
+                  <input id="selectBorderRadiusTL" class="form-control" type="number">
+                </li>
+                <li>
+                  <label for="">top right</label>
+                  <input id="selectBorderRadiusTR" class="form-control" type="number">
+                </li>
+                <li>
+                  <label for="">bottom right</label>
+                  <input id="selectBorderRadiusBR" class="form-control" type="number">
+                </li>
+                <li>
+                  <label for="">bottom left</label>
+                  <input id="selectBorderRadiusBL" class="form-control" type="number">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Tab 3 (Background Color) -->
+          <div class="tab-pane fade" id="nav-backgroundColor" role="tabpanel" aria-labelledby="nav-backgroundColor-tab"
+            tabindex="0">
+            <div>
+              <ul class="configuration-list">
+                <li>
+                  <label style="color: #f00;">Red</label>
+                  <input id="selectRGBRed" class="form-range" type="range" min="0" max="255" value="0">
+                </li>
+
+                <li>
+                  <label style="color: #0f0;">Green</label>
+                  <input id="selectRGBGreen" class="form-range" type="range" min="0" max="255" value="0">
+                </li>
+
+                <li>
+                  <label style="color: #00f;">Blue</label>
+                  <input id="selectRGBBlue" class="form-range" type="range" min="0" max="255" value="0">
+                </li>
+
+                <li>
+                  <label>Opacity</label>
+                  <input id="selectRGBOpacity" class="form-range" type="range" min="0" max="1" step="0.1" value="1">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Tab 4 (Gradient) -->
+          <div class="tab-pane fade" id="nav-gradient" role="tabpanel" aria-labelledby="nav-gradient-tab" tabindex="0">
+            <div>
+              <ul class="configuration-list">
+                <li>
+                  <label>Start color</label>
+                  <input id="selectGradientStart" class="form-control" type="text">
+                </li>
+
+                <li>
+                  <label>End color</label>
+                  <input id="selectGradientEnd" class="form-control" type="text">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Tab 5 (Position) -->
+          <div class="tab-pane fade" id="nav-position" role="tabpanel" aria-labelledby="nav-position-tab"
+            tabindex="0">
+            <div>
+              <ul class="configuration-list">
+                <li>
+                  <label>center</label>
+                  <input id="selectPositionCenter" type="radio" name="position" checked>
+                </li>
+
+                <li>
+                  <label>top left corner</label>
+                  <input id="selectPositionTLC" type="radio" name="position">
+                </li>
+
+                <li>
+                  <label>top right corner</label>
+                  <input id="selectPositionTRC" type="radio" name="position">
+                </li>
+
+                <li>
+                  <label>bottom right corner</label>
+                  <input id="selectPositionBRC" type="radio" name="position">
+                </li>
+
+                <li>
+                  <label>bottom left corner</label>
+                  <input id="selectPositionBLC" type="radio" name="position">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-12 col-md-6 col-lg-8 my-col-result">
+        <!-- Results-->
+        <div class="cube-wrapper">
+          <div id="resultCube" class="cube-wrapper__cube center">Some text</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW-3 -->
+    <div class="row">
+      <div class="col">
+        <!-- Copy button wrapper-->
+        <div class="copy-btn-wrapper">
+          <!-- Copy button-->
+          <button type="button" id="btnCopy" class="btn btn-primary">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW-4 -->
+    <div class="row">
+      <!-- Code example -->
+      <div class="col my-col-code">
+        <div class="example-code-wrapper">
+          <ul id="exampleCodeList" class="example-code-wrapper__list">
+            <li>font-family<span class="accent">:</span> <span id="codeFontFamily"></span><span class="accent">;</span></li>
+            <li>font-size<span class="accent">:</span> <span id="codeFontSize"></span><span class="accent">;</span></li>
+            <li>font-weight<span class="accent">:</span> <span id="codeFontWeight"></span><span class="accent">;</span></li>
+            <li>color<span class="accent">:</span> <span id="codeColor"></span><span class="accent">;</span></li>
+
+            <li>border<span class="accent">:</span>
+              <span id="codeBorderWidth"></span>
+              <span id="codeBorderStyle"></span>
+              <span id="codeBorderColor"></span><span class="accent">;</span>
+            </li>
+
+            <li>border-radius<span class="accent">:</span>
+              <span id="codeBorderRadiusTL"></span>
+              <span id="codeBorderRadiusTR"></span>
+              <span id="codeBorderRadiusBR"></span>
+              <span id="codeBorderRadiusBL"></span><span class="accent">;</span>
+            </li>
+
+            <li>
+              background-color<span class="accent">:</span> rgba(
+              <span id="codeRGBRed">0</span>,
+              <span id="codeRGBGreen">0</span>,
+              <span id="codeRGBBlue">0</span>,
+              <span id="codeRGBOpacity">1</span>)<span class="accent">;</span>
+            </li>
+
+            <li>
+              background<span class="accent">:</span> linear-gradient(<span id="codeGradientStart">0</span>, <span id="codeGradientEnd">0</span>)<span class="accent">;</span>
+            </li>
+
+            <li>position<span class="accent">:</span> <span id="codePositionPosition">absolute</span><span class="accent">;</span></li>
+            <li><span id="codePositionY">top<span class="accent">:</span> 50%</span><span class="accent">;</span></li>
+            <li><span id="codePositionX">left<span class="accent">:</span> 50%</span><span class="accent">;</span></li>
+            <li id="codePositionTransform">transform<span class="accent">:</span> translate(-50%, -50%)<span class="accent">;</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap js -->
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- My js -->
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
